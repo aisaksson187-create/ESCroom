@@ -1,0 +1,22 @@
+{
+  "name": "escroom",
+  "version": "1.0.0",
+  "description": "ESCroom",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aisaksson187-create/ESCroom.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aisaksson187-create/ESCroom/issues"
+  },
+  "homepage": "https://github.com/aisaksson187-create/ESCroom#readme",
+  "dependencies": {
+    "sass": "^1.93.2"
+  }
+}
