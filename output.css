@@ -1,0 +1,130 @@
+@charset "UTF-8";
+body {
+  font-family: Arial, sans-serif;
+}
+
+@media screen and (min-width: 700px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px auto 100px;
+  }
+}
+
+.header {
+  background-color: #011827;
+  height: 144px;
+}
+@media screen and (min-width: 700px) {
+  .header {
+    grid-column: 1/3;
+  }
+}
+
+.logo-img {
+  margin-left: 27px;
+  width: 128px;
+  height: 82px;
+}
+
+.logo-text {
+  display: flex;
+  align-items: center;
+  /* centrera vertikalt */
+  gap: 5px;
+  /* avstånd mellan logga och text */
+}
+
+/* Text bredvid loggan */
+.title {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+/* Bild under headern */
+.hacker {
+  width: 100%;
+  background-color: #001528;
+}
+
+.hacker-img {
+  width: 100%;
+}
+
+.jdoe-img {
+  margin-left: 21px;
+  float: left;
+}
+
+.p {
+  display: flex;
+  justify-self: center;
+  font-size: 18px;
+}
+
+.q {
+  margin-left: 117px;
+  display: flex;
+  justify-self: wrap;
+  font-weight: 400;
+  color: #000000;
+  font-size: 24px;
+  font-style: italic;
+}
+
+.chalBtn {
+  margin-top: 40px;
+  display: flex;
+  justify-self: center;
+  border: none;
+  background-color: #8acfe5;
+  padding: 15px 32px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 2px;
+}
+
+.foot {
+  padding-top: 50px;
+  background-color: #011827;
+  height: 565px;
+}
+@media screen and (min-width: 700px) {
+  .foot {
+    grid-column: 1/3;
+  }
+}
+
+.foottitle {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: 25px;
+  padding-left: 25px;
+}
+
+.foottext {
+  color: white;
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 25px;
+}
+
+a {
+  display: flex;
+  justify-self: center;
+  color: #36769D;
+  font-weight: bold;
+  font-family: "Roboto";
+  font-size: 16px;
+}
+
+/* Small tablet styles */
+/* Large tablet and laptop styles */
+/* Desktop styles */
+/* */
