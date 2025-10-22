@@ -1,222 +1,214 @@
 /* variables */
 :root {
-    --red: #e3170a;
-    --gray: #B6BDB5;
-    --darkblue: #011827;
-    --lightblue: #8ACFE5;
-    --blue: #36769D;
+  --red: #e3170a;
+  --gray: #B6BDB5;
+  --darkblue: #011827;
+  --lightblue: #8ACFE5;
+  --blue: #36769D;
 }
 
-/* reset */
+/* reset  */
 body,
 p,
 a,
 ul,
 li {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
-/* base styles */
 body {
-    font-family: 'Roboto', sans-serif;
-    background: var(--darkblue);
-    overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
 }
 
 .header {
-    color: white;
-    display: flex;
-    font-style: bold;
-    align-items: center;
-    font-size: 24px;
-    font-weight: 700;
-    text-align: center;
-    padding-bottom: 30px;
+  background-color: var(--darkblue);
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
 }
 
-.header img {
-    margin-top: 26px;
-    margin-left: 27px;
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 
 }
 
+/* Textens styling */
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1;
+  text-align: left;
+}
 
+.logo-container img {
+  height: 70px;
+  width: auto;
+}
 
-.span {
-    margin-left: 15px;
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    /* staplar orden vertikalt */
-    justify-content: center;
-    /* centrerar blocket vertikalt */
-    color: white;
-    font-size: 24px;
-    font-weight: 700;
-    text-align: left;
-    line-height: 1.3;
+.hacky img {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
 }
 
 .button {
-    padding: 1rem 2rem;
-    background: none;
-    background-color: var(--lightblue);
-    border: 2px;
-    color: rgb(0, 0, 0);
-    font-size: 1.5rem;
-    font-weight: 700;
-    border-radius: 4px;
+  padding: 1rem 2rem;
+  background: none;
+  background-color: var(--lightblue);
+  border: 2px;
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  border-radius: 4px;
 }
+
 .button:hover {
-    background: #396a7a;
-    cursor: pointer; /* desktop use */
+  background: #396a7a;
+  cursor: pointer;
 }
 
 
 p a {
-    margin-top: 30px;
-    display: grid;
-    justify-content: center;
-    background-color: white;
-    background: none;
-    border: none;
-    color: var(--blue);
-    font-size: 16px;
-    font-style: bold;
-    font-weight: 700;
-    border-radius: 4px;
-    text-decoration: underline; 
+  margin-top: 30px;
+  display: grid;
+  justify-content: center;
+  background-color: white;
+  background: none;
+  border: none;
+  color: var(--blue);
+  font-size: 16px;
+  font-style: bold;
+  font-weight: 700;
+  border-radius: 4px;
+  text-decoration: underline;
 
 }
 
 
-/* fonts */
 
 
 h4 {
-    color: white;
-    font-weight: normal;
+  color: white;
+  font-weight: normal;
 }
 
 li {
-    color: white;
+  color: white;
 }
 
-
-/*                                 Grids                                     */
 .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr
 }
 
 
 div h2 {
-    font-size: 32px;
-    font-weight: 400;
-    color: black
+  font-size: 32px;
+  font-weight: 400;
+  color: black
 }
 
-.projects {
+.reviews {
   display: grid;
-  grid-template-columns: 96px 1fr; /* bild + textyta som kan flöda långt åt höger */
-  align-items: start;
-  gap: 1rem;
-  background: #fff;
-  padding: 24px;
-  height: auto;            /* ta bort fasta 200px från .div */
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-items: center;
+  background-color: white;
+  padding: 2rem;
 }
 
-.projects img {
-  grid-column: 1;
-  width: 72px;
-  height: 72px;
+.review {
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  text-align: left;
+}
+
+.review img {
+  align-self: center;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.projects p {
-  grid-column: 2;          /* citat till höger om bilden och får hela högra fältet */
-  margin: 0;
-  font-style: italic;
-  font-size: 18px;
-  line-height: 1.45;
-}
-
-.projects h2 {
-  grid-column: 1 / -1;     /* spänner över båda kolumnerna */
-  text-align: center;      /* CENTRERAD under citatet */
-  margin: 0 0;
-  font-size: 18px;
-  font-weight: 400;
+.review blockquote {
+  margin: 1rem 0 0;
+  font-size: 1rem;
+  line-height: 1.4;
   color: #000;
+  text-align: left;
+  max-width: 500px;
 }
 
+.review cite {
+  font-style: normal;
+  display: block;
+  font-size: 0.9rem;
+  color: black;
+  text-align: left;
+}
 
 
 #welcome {
-    padding: 0px 20px 20px 20px;
+  padding: 0px 20px 20px 20px;
 }
 
 .welcome-text {
-    grid-column: 1/3;
+  grid-column: 1/3;
 }
 
 #skills h3 {
-    text-align: center;
+  text-align: center;
 }
 
 #skills ul {
-    margin: 40px 0;
+  margin: 40px 0;
 }
 
 #skills li {
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.2);
-    grid-column: 1/3;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  grid-column: 1/3;
 }
 
 #contact {
-    padding: 30px 20px;
-    background-color: var(--darkblue);
-}
-
-#contact form {
-    width: 80%;
-    max-width: 400px;
-    margin: 20px auto;
-    text-align: center;
-}
-
-#contact input,
-#contact textarea {
-    width: 100%;
-    margin: 10px 0;
+  padding: 30px 20px;
+  background-color: var(--darkblue);
 }
 
 .div {
- display: grid;
- justify-content: center;
- align-content: center;
- height: 200px;
- background-color: white;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 200px;
+  background-color: white;
 }
 
 div img {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 div p {
-    font-weight: 400;
-    font-size: 32px;
-    color: black;
+  font-weight: 400;
+  font-size: 32px;
+  color: black;
 }
 
 
@@ -229,21 +221,24 @@ div p {
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
   padding-bottom: 1rem;
-  padding-left: calc(50vw - 160px);  /* första kortet i mitten */
-  padding-right: 2rem;               /* lite av nästa syns */
+  padding-left: calc(50vw - 160px);
+  /* första kortet i mitten */
+  padding-right: 2rem;
 }
-.cards::-webkit-scrollbar { 
+
+.cards::-webkit-scrollbar {
   display: none;
 }
 
-.card{
-  display:flex;
-  flex-direction:column;
-  background:#fff;
-  border-radius:10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-  overflow:hidden;
-  scroll-snap-align:center;          /* centrera efter scroll och sen snap snap */
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  scroll-snap-align: center;
+  /* centrera efter scroll och sen snap snap */
   padding-bottom: 2rem;
 }
 
@@ -271,10 +266,10 @@ div p {
 }
 
 .card-content p {
-    
-    text-align: start;
-    font-weight: 400;
-    font-size: 1rem;
+
+  text-align: start;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 /* stars checked/empty */
@@ -283,8 +278,8 @@ div p {
 }
 
 .empty {
-  color: white;            /* fyllningen vit */
-  -webkit-text-stroke: 1.5px #e3170a; /* röd kontur */
+  color: white;
+  -webkit-text-stroke: 1.5px #e3170a;
 }
 
 .bookBtn {
@@ -300,67 +295,343 @@ div p {
 }
 
 .bookBtn:hover {
-  background-color: #940b01; /* desktop use */
+  background-color: #940b01;
   cursor: pointer;
 }
 
 
 .story {
- display: grid;
- justify-content: center;
- align-content: center;
- height: auto;
- background-color:var(--darkblue)
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: auto;
+  background-color: var(--darkblue)
 }
 
 .story p {
-    font-size: 1.8rem;
-    padding: 5rem 2rem 4rem 2rem;
-    text-align: center;
-    color: white;
-    font-weight: 400;
+  font-size: 1.8rem;
+  padding: 5rem 2rem 4rem 2rem;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  max-width: 600px;
 }
 
 .storyBtn {
-    margin-bottom: 6rem;
-    display: flex;
-    justify-self: center;
-    padding: 1rem 2rem;
-    background: none;
-    background-color: var(--darkblue);
-    border: 0.2rem solid var(--lightblue);
-    color: var(--lightblue);
-    font-size: 1.5rem;
-    font-weight: 700;
-    font-style: bold;
-    border-radius: 0.2rem;
+  margin-bottom: 6rem;
+  display: flex;
+  justify-self: center;
+  padding: 1rem 2rem;
+  background: none;
+  background-color: var(--darkblue);
+  border: 0.2rem solid var(--lightblue);
+  color: var(--lightblue);
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: bold;
+  border-radius: 0.2rem;
 
 }
 
 .storyBtn:hover {
-    background-color: var(--lightblue);
-    border: 0.2rem solid var(--darkblue);
-    color: var(--darkblue); /* desktop use */
-    cursor: pointer;
+  background-color: var(--lightblue);
+  border: 0.2rem solid var(--darkblue);
+  color: var(--darkblue);
+  cursor: pointer;
 }
 
-section {
- display: grid;
- justify-content: center;
- align-content: center;
- height: 450px;
- background-color: white;
+.pointing {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
 }
+
+.pointing-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+
+.thinking {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+}
+
+.thinking-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 
 section h1 {
-    padding: 0.1rem 1.2rem 0rem 1rem;
+  padding: 0.1rem 1.2rem 0rem 1rem;
 }
 
 section p {
-    font-size: 1.5rem;
-    padding: 1rem;
+  font-size: 1.5rem;
+  padding: 1rem;
 }
+
 .playBtn {
+  padding: 1.1rem 2.3rem;
+  background: none;
+  background-color: var(--red);
+  border: 2px;
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 4px;
+  justify-self: start;
+  margin: 1rem 0rem 4rem 1rem;
+}
+
+.playBtn:hover {
+  background-color: #940b01;
+  cursor: pointer;
+}
+
+
+.foot {
+  background-color: var(--darkblue);
+  color: white;
+  margin-top: 4rem;
+  padding: 2rem;
+}
+
+.foot h3 {
+  color: white;
+}
+
+.foot a {
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+.foot p {
+  color: white;
+  font-size: 1rem;
+}
+
+
+.foot a:hover {
+  text-decoration: underline;
+}
+
+/* */
+
+
+/* Desktop styles */
+/* Add navigation  */
+/* hide 2nd comment  */
+/* hide 3rd room  */
+.card:nth-child(3) {
+  display: none;
+}
+
+.review:nth-child(2) {
+  display: none;
+}
+
+.challenge-buttons {
+  display: none;
+}
+
+.challenges-buttons {
+  display: none;
+}
+
+.main-nav {
+  display: none;
+}
+
+@media screen and (min-width: 960px) {
+  .main-nav {
+    display: block;
+  }
+
+  .main-nav ul {
+    background-color: var(--darkblue);
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    list-style: none;
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+  .main-nav a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .main-nav a:hover {
+    color: var(--lightblue);
+    cursor: pointer
+  }
+
+  /* Logo change */
+  .logo-text {
+    flex-direction: row;
+    gap: 0.8rem;
+  }
+
+  /* Buttons and links change */
+  p a {
+    display: none;
+  }
+
+  .button {
+    display: none;
+  }
+
+  .challenge-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: -1.5rem;
+  }
+
+  .challenges-buttons {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem;
+  }
+
+  .btn-red {
+    background: none;
+    background-color: var(--red);
+    color: white;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2px;
+  }
+
+  .btn-red:hover {
+    background-color: #940b01;
+    cursor: pointer;
+  }
+
+  .btn-blue {
+    background: none;
+    background-color: var(--lightblue);
+    color: black;
+    font-weight: 700;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2px;
+  }
+
+  .btn-blue:hover {
+    background: #396a7a;
+    cursor: pointer;
+  }
+
+  .review:nth-child(2) {
+    display: flex;
+  }
+
+  .reviews {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+
+  .review {
+    display: flex;
+  }
+
+  .card:nth-child(3) {
+    display: grid;
+  }
+
+  .cards {
+    display: grid;
+    grid-auto-flow: initial;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 2rem;
+    overflow-x: visible;
+    padding: 0;
+    max-width: 1100px;
+    margin: 0 auto;
+
+  }
+
+  .card {
+    scroll-snap-align: unset;
+  }
+
+
+  .thinking {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 450px;
+  }
+
+  .thinking-image {
+    height: 100%;
+    max-width: 50%;
+    min-width: 50%;
+  }
+
+
+  .thinking-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .thinking-text {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 4rem;
+    max-width: 50%;
+  }
+
+
+  .pointing {
+    display: flex;
+    flex-direction: row;
+    height: 450px;
+  }
+
+  .pointing-image {
+    height: 100%;
+    max-width: 50%;
+    min-width: 50%;
+  }
+
+  .pointing-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .pointing-text {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 4rem;
+    max-width: 50%;
+
+  }
+
+  .playBtn {
     padding: 1.1rem 2.3rem;
     background: none;
     background-color: var(--red);
@@ -371,109 +642,41 @@ section p {
     border-radius: 4px;
     justify-self: start;
     margin: 1rem 0rem 4rem 1rem;
-}
+  }
 
-.playBtn:hover {
-  background-color: #940b01; /* desktop use */
-  cursor: pointer;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.foot {
- margin-top: 4rem;
- margin-left: 2rem;
- height: 150px;
- background-color: var(--darkblue);
- justify-self: start;
-}
-
-.foot h3 {
+  .foot {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin: 6rem auto 0 auto;
+    background-color: var(--darkblue);
     color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
-.foot a {
-    color: white;
-    text-decoration: none;
-    font-weight: 300;
-    font-size: 1.2rem;
-}
+    padding: 2rem;
+  }
 
 
-.foot p {
-    color: white;
-    text-decoration: none;
-    font-weight: 300;
-    font-size: 1.2rem;
-}
+  .foot .first {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin-left: 50px;
+    grid-column: 1 / span 2;
+    max-width: 600px;
+  }
 
 
+  .foot .second {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    grid-column: 3;
+    text-align: center;
+  }
 
 
-
-
-/* */
-
-
-/* mobile styles */
-
-
-
-/* Small tablet styles */
-@media screen and (min-width: 620px) {}
-
-/* Large tablet and laptop styles */
-@media screen and (min-width: 960px) {
-    body {
-        font-size: 18px;
-    }
-
-}
-/* Desktop styles */
-@media screen and (min-width: 1200px) {
-    body {
-        font-size: 20px;
-    }
+  .foot .third {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    grid-column: 4;
+    text-align: center;
+  }
 
 }
