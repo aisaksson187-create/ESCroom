@@ -49,8 +49,8 @@ body {
   justify-content: center;
   color: white;
   font-weight: 700;
-  font-size: 1.5rem;
-  line-height: 1;
+  font-size: .6rem;
+  line-height: 0rem;
   text-align: left;
 }
 
@@ -205,6 +205,7 @@ p a {
 }
 
 .review cite {
+  margin-left: 1px;
   font-style: normal;
   display: block;
   font-size: 0.9rem;
@@ -224,6 +225,12 @@ p a {
   background-color: white;
 }
 
+.div h2 {
+  margin-bottom: -55px;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
 section h2 { padding: 0.1rem 1.2rem 0rem 1rem; font-size: 1.9rem; } section p { font-size: 1.3rem; padding: 1rem; }
 
 
@@ -237,7 +244,7 @@ section h2 { padding: 0.1rem 1.2rem 0rem 1rem; font-size: 1.9rem; } section p { 
   grid-auto-columns: 320px;
   gap: 2.5rem;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory; // vertical scroll for phone/apps
   scrollbar-width: none;
   padding-bottom: 1rem;
   padding-left: calc(50vw - 160px);
@@ -245,7 +252,7 @@ section h2 { padding: 0.1rem 1.2rem 0rem 1rem; font-size: 1.9rem; } section p { 
 }
 
 .cards::-webkit-scrollbar {
-  display: none;
+  display: none; // remove scrollbar for chrome / safari
 }
 
 .card {
@@ -332,10 +339,10 @@ section h2 { padding: 0.1rem 1.2rem 0rem 1rem; font-size: 1.9rem; } section p { 
   background-color: white;
 }
 
-.pointing-image {
+.pointing-image img {
+  max-height: 480px;
   width: 100%;
-  height: auto;
-  display: block;
+  height: auto; 
   object-fit: cover;
 }
 
@@ -347,10 +354,10 @@ section h2 { padding: 0.1rem 1.2rem 0rem 1rem; font-size: 1.9rem; } section p { 
   background-color: white;
 }
 
-.thinking-image {
+.thinking-image img {
+  max-height: 480px;
   width: 100%;
-  height: auto;
-  display: block;
+  height: auto; 
   object-fit: cover;
 }
 
@@ -408,7 +415,7 @@ section h2 { padding: 0.1rem 1.2rem 0rem 1rem; font-size: 1.9rem; } section p { 
   display: none;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1280px) {
   .main-nav {
     display: block;
   }
@@ -427,6 +434,7 @@ section h2 { padding: 0.1rem 1.2rem 0rem 1rem; font-size: 1.9rem; } section p { 
     color: white;
     font-weight: 600;
     text-decoration: none;
+    font-size: 1.5rem;
   }
 
   .main-nav a:hover {
@@ -434,12 +442,19 @@ section h2 { padding: 0.1rem 1.2rem 0rem 1rem; font-size: 1.9rem; } section p { 
     cursor: pointer
   }
 
+  .div h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
 // ==================================================
 // Logo, buttons and links change for desktop
 // ==================================================
   .logo-text {
     flex-direction: row;
     gap: 0.8rem;
+    font-size: 1rem;
+    margin-top: 35px;
   }
 
   p a {
@@ -454,7 +469,7 @@ section h2 { padding: 0.1rem 1.2rem 0rem 1rem; font-size: 1.9rem; } section p { 
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin: -1.5rem;
+    margin-top: -2.1rem;
   }
 
   .challenges-buttons {
@@ -470,9 +485,10 @@ section h2 { padding: 0.1rem 1.2rem 0rem 1rem; font-size: 1.9rem; } section p { 
     background-color: var(--red);
     color: white;
     font-weight: 700;
-    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    padding: 1.5rem 4.5rem;
     border: none;
-    border-radius: 2px;
+    border-radius: 4px;
   }
 
   .redBtn:hover {
@@ -485,9 +501,10 @@ section h2 { padding: 0.1rem 1.2rem 0rem 1rem; font-size: 1.9rem; } section p { 
     background-color: var(--lightblue);
     color: black;
     font-weight: 700;
-    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    padding: 1.5rem 4.5rem;
     border: none;
-    border-radius: 2px;
+    border-radius: 4px;
   }
 
   .blueBtn:hover {
@@ -522,6 +539,7 @@ section h2 { padding: 0.1rem 1.2rem 0rem 1rem; font-size: 1.9rem; } section p { 
     padding: 0;
     max-width: 1100px;
     margin: 0 auto;
+    padding-bottom: 5rem;
 
   }
 
